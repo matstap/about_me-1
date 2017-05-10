@@ -1,38 +1,46 @@
-<script>
-  'use strict';
+'use strict';
 
-  var gender = prompt('Yes or no - are you a male?');
-  console.log('gender:' + gender);
+var gender = prompt('Yes or no - are you a male?').toUpperCase();
+console.log('gender:' + gender);
 
-  if (answer === 'N') {
-    alert('I agree.');
-  } else {
-    alert('That is not what your mom said.')
-          }
+if (gender === 'N' || gender === 'no') {
+  alert('I agree.');
+} else {
+  alert('That is not what your mom said.');
+}
 
-  var answer = prompt(user + ', Please answer with Y or N.  Does this suit make
-   me look fat?');
-  console.log('users answer:' + answer);
+var suit = prompt('Yes or no - are you wearing a suit?').toUpperCase();
+console.log('suit:' + suit);
 
-  if (answer === 'N') {
-    alert('Liar. My face does that.');
-  } else {
-    alert('That's okay. Everyone knows that suits add fifty pounds.')
-  }
+if (suit === 'N' || suit === 'no') {
+  alert('It is too hot for a suit anyway.');
+} else {
+  alert('You like to dress formal at all times.');
+}
 
-  var height = prompt('Can you guess, Y or N, how tall I am?');
-  console.log('height:' + height);
+var hair = prompt('Yes or no - do you have brown hair?').toUpperCase();
+console.log('hair:' + hair);
 
-  if (answer === 'N') {
-    alert('Then open your eyes and try.');
-  } else {
-    alert('You must be a rocket scientist.')
+if (hair === 'N' || hair === 'no') {
+  alert('I agree.');
+} else {
+  alert('Brunettes have more fun.');
+}
 
-  var hobby = prompt('Do you own a car - Y or N?');
-  console.log('hobby:' + hobby);
+var braces = prompt('Yes or no - do you wear braces?').toUpperCase();
+console.log('braces:' + braces);
 
-  if (answer === 'N') {
-    alert('You must be some kind of treehugger.');
-  } else {
-    alert('You are killing the planet.')
-  </script>
+if (braces === 'N' || braces === 'no') {
+  alert('You have nice teeth even without braces.');
+} else {
+  alert('Ouch.  I hope they come out soon.');
+}
+//
+var siblings = prompt('Yes or no - do you have siblings?').toUpperCase();
+console.log('siblings:' + siblings);
+
+if (siblings === 'N' || siblings === 'no') {
+  alert('Lucky you?');
+} else {
+  alert('Nice.  I have two siblings myself.');
+}
