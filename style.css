@@ -1,0 +1,22 @@
+header {
+  background: #666;
+  color: #fff;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 72px;
+  margin-bottom: 20px;
+}
+
+p {
+font-size: 35px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 20px;
+  margin-bottom: 5px;
+  margin-top: 10px;
+
+}
