@@ -19,9 +19,14 @@ var entries = [
   'Yes or no - Do you think Chris carries a security clearance?',
   'Yes or no - Chris prefers to work remotely.',
   'Yes or no - Does Chris wear braces?',
-  'Yes or no - are you interested in contacting Chris for a conversation?'
+  'Yes or no - are you interested in contacting Chris for a conversation?',
+  'Pick a number between zero and 100.',
+  'Pick a letter.'
 ];
-var correct = ['Y', 'Y', 'Y', 'N', 'Y'];
+var correct = ['Y', 'Y', 'Y', 'N', 'Y',
+['3', '7', '9', '23'],
+['a', 'b', 'c', 'd', 'e']
+];
 var responses = [
   'You can find all of Chris\'s publicly available code here: https://github.com/taxpayer131.',
   'Chris carries a Dept. of Defense Top Secret clearance and can work in most any Federal govt environment.',
@@ -30,7 +35,7 @@ var responses = [
   'Send Chris an email at chris.stefan1844@gmail.com!  Thanks!'
 ];
 
-for (var i = 0; i < entries.length; i++) {
+for (var i = 0; i < 5; i++) {
   tally += questions(entries[i], correct[i], responses[i]);
 }
 
@@ -90,10 +95,38 @@ if (siblings === 'N' || siblings === 'NO') {
   alert('Great!  Send Chris an email at chris.stefan1844@gmail.com!  Thanks!');
   tally++;
 }*/
-  //Sixth Question
 
+// add ques67 to tally
+function ques67(entry, correct, itr) {
+  var answer;
+  var flag = false;
+  var count = 1;
+  while (count <= itr && flag === false) {
+    answer = prompt(entry);
+    for (var i=0; i < entry.length; i++) {
+    console.log('current:', correct[i]);
+
+    if (answer === correct[i]) {
+    alert('Correct!');
+    tally++;
+    flag = true;
+    return 1;
+          }
+        }
+    if (flag === false && count < itr) {
+    alert('No, guess again.');
+    count++;
+  } else if (flag === false && count === itr){
+    alert('You are out of guesses!');
+    return 0;
+    }
+  }
+
+}
+
+/*  //Sixth Question
 var number = ['3', '7', '9', '9', '23'];
-var answer;/*= prompt('Pick a number between zero and 100.');*/
+var answer;
 var flag = false;
 var count = 1; // counts numberr of guesses
 
@@ -117,7 +150,7 @@ while (count <= 4 && flag === false) {
   count++;
   }
 }
-
+*/
 /*for (var i=0; i < number.length; i++) {
 console.log('current number:', number[i]);
 
@@ -132,7 +165,7 @@ alert('No, guess again.');
     }*/
 
 
-// question 7
+/*// question 7
     var letters = ['a', 'b', 'c', 'd', 'e'];
     var guess;
     var flag = false;
@@ -157,7 +190,11 @@ alert('No, guess again.');
       alert('You are out of guesses!');
       count++;
       }
-    }
+    }*/
+
+for (var i = 5; i < 7; i++) {
+  tally += ques67(entries[i], correct[i]);
+}
 
 alert('That was fun, ' + user + '. You got ' + tally + ' correct!');
 console.log(tally);
