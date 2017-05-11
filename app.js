@@ -1,12 +1,18 @@
 'use strict';
 
+var tally = 0;
+
+var user = prompt('Hey, there! What\'s your name?');
+
 var gender = prompt('Yes or no - Does Chris publish code to Github?').toUpperCase();
 console.log('gender:' + gender);
+
 
 if (gender === 'N' || gender === 'no') {
   alert('Incorrect.  You can find all of Chris\'s publicly available code here: https://github.com/taxpayer131.');
 } else {
   alert('Correct! Find Chris\'s publicly available code here: https://github.com/taxpayer131.');
+  tally++;
 }
 
 var suit = prompt('Yes or no - Do you think Chris carries a security clearance?').toUpperCase();
@@ -16,6 +22,7 @@ if (suit === 'N' || suit === 'no') {
   alert('Incorrect.  Chris carries a Dept. of Defense Top Secret clearance and can work in most any Federal govt environment.');
 } else {
   alert('Correct!  Chris carries a Dept. of Defense Top Secret clearance and can work in most any Federal govt environment.');
+  tally++;
 }
 
 var hair = prompt('Yes or no - Chris prefers to work remotely.').toUpperCase();
@@ -25,6 +32,7 @@ if (hair === 'N' || hair === 'no') {
   alert('Correct.  Chris prefers to work remotely only 1/3 of the time.');
 } else {
   alert('Yes, but Chris prefers to work remotely only  1/3 of the time.');
+  tally++;
 }
 
 var braces = prompt('Yes or no - do you wear braces?').toUpperCase();
@@ -32,6 +40,7 @@ console.log('braces:' + braces);
 
 if (braces === 'N' || braces === 'no') {
   alert('You have nice teeth even without braces.');
+  tally++;
 } else {
   alert('Ouch.  I hope they come out soon.');
 }
@@ -43,6 +52,7 @@ if (siblings === 'N' || siblings === 'no') {
   alert('Oh well, maybe next time.');
 } else {
   alert('Great!  Send Chris an email at chris.stefan1844@gmail.com!  Thanks!');
+  tally++;
 }
   //Sixth Question
 
@@ -58,6 +68,7 @@ while (count <= 4 && flag === false) {
 
   if (answer === number[i]) {
   alert('Correct!');
+  tally++;
   flag = true;
   break;
         }
@@ -98,6 +109,7 @@ alert('No, guess again.');
 
       if (guess === letters[i]) {
       alert('Correct!');
+      tally++;
       flag = true;
       break;
             }
@@ -111,6 +123,8 @@ alert('No, guess again.');
       }
     }
 
+alert('That was fun, ' + user + '. You got ' + tally + ' correct!');
+console.log(tally);
 
   /*Seventh Question
   var project = prompt('Can you guess how many coding projects Chris has participated in (You get four guesses.').toUpperCase();
