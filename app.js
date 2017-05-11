@@ -1,14 +1,24 @@
 'use strict';
 
 var tally = 0;
-
 var user = prompt('Hey, there! What\'s your name?');
+
+function questions(entry, correct, response) {
+  var answer = prompt(entry).toUpperCase();
+  if (answer.charAt(0) !== correct ) {
+    alert('Incorrect. ' + response);
+    return 0;
+  } else {
+    alert('Correct! ' + response);
+    return 1;
+  }
+}
 
 var gender = prompt('Yes or no - Does Chris publish code to Github?').toUpperCase();
 console.log('gender:' + gender);
 
 
-if (gender === 'N' || gender === 'no') {
+if (gender === 'N' || gender === 'NO') {
   alert('Incorrect.  You can find all of Chris\'s publicly available code here: https://github.com/taxpayer131.');
 } else {
   alert('Correct! Find Chris\'s publicly available code here: https://github.com/taxpayer131.');
@@ -18,7 +28,7 @@ if (gender === 'N' || gender === 'no') {
 var suit = prompt('Yes or no - Do you think Chris carries a security clearance?').toUpperCase();
 console.log('suit:' + suit);
 
-if (suit === 'N' || suit === 'no') {
+if (suit === 'N' || suit === 'NO') {
   alert('Incorrect.  Chris carries a Dept. of Defense Top Secret clearance and can work in most any Federal govt environment.');
 } else {
   alert('Correct!  Chris carries a Dept. of Defense Top Secret clearance and can work in most any Federal govt environment.');
@@ -28,7 +38,7 @@ if (suit === 'N' || suit === 'no') {
 var hair = prompt('Yes or no - Chris prefers to work remotely.').toUpperCase();
 console.log('hair:' + hair);
 
-if (hair === 'N' || hair === 'no') {
+if (hair === 'N' || hair === 'NO') {
   alert('Correct.  Chris prefers to work remotely only 1/3 of the time.');
 } else {
   alert('Yes, but Chris prefers to work remotely only  1/3 of the time.');
@@ -38,7 +48,7 @@ if (hair === 'N' || hair === 'no') {
 var braces = prompt('Yes or no - do you wear braces?').toUpperCase();
 console.log('braces:' + braces);
 
-if (braces === 'N' || braces === 'no') {
+if (braces === 'N' || braces === 'NO') {
   alert('You have nice teeth even without braces.');
   tally++;
 } else {
@@ -48,7 +58,7 @@ if (braces === 'N' || braces === 'no') {
 var siblings = prompt('Yes or no - are you interested in contacting Chris for a conversation?').toUpperCase();
 console.log('siblings:' + siblings);
 
-if (siblings === 'N' || siblings === 'no') {
+if (siblings === 'N' || siblings === 'NO') {
   alert('Oh well, maybe next time.');
 } else {
   alert('Great!  Send Chris an email at chris.stefan1844@gmail.com!  Thanks!');
