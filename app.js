@@ -17,8 +17,8 @@ function questions(entry, correct, response) {
 var entries = [
   'Yes or no - Does Chris publish code to Github?',
   'Yes or no - Do you think Chris carries a security clearance?',
-  'Yes or no - Chris prefers to work remotely.'
-  'Yes or no - Does Chris wear braces?'
+  'Yes or no - Chris prefers to work remotely.',
+  'Yes or no - Does Chris wear braces?',
   'Yes or no - are you interested in contacting Chris for a conversation?'
 ];
 var correct = ['Y', 'Y', 'Y', 'N', 'Y'];
@@ -28,8 +28,11 @@ var responses = [
   'Chris prefers to work remotely only 1/3 of the time.',
   'Chris does not wear braces',
   'Send Chris an email at chris.stefan1844@gmail.com!  Thanks!'
-]
+];
 
+for (var i = 0; i < entries.length; i++) {
+  tally += questions(entries[i], correct[i], responses[i]);
+}
 
 // question 1
 /*var gender = prompt('Yes or no - Does Chris publish code to Github?').toUpperCase();
