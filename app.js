@@ -44,13 +44,34 @@ if (siblings === 'N' || siblings === 'no') {
 } else {
   alert('Great!  Send Chris an email at chris.stefan1844@gmail.com!  Thanks!');
 }
-  /*Sixth Question
+  //Sixth Question
 
 var number = ['3', '7', '9', '9', '23'];
-var answer = prompt('Pick a number between zero and 100.');
-var flag;
+var answer;/*= prompt('Pick a number between zero and 100.');*/
+var flag = false;
+var count = 1; // counts numberr of guesses
 
-for (var i=0; i < number.length; i++) {
+while (count <= 4 && flag === false) {
+  answer = prompt('Pick a number between zero and 100.');
+  for (var i=0; i < number.length; i++) {
+  console.log('current number:', number[i]);
+
+  if (answer === number[i]) {
+  alert('Correct!');
+  flag = true;
+  break;
+        }
+      }
+  if (flag === false && count < 4) {
+  alert('No, guess again.');
+  count++;
+} else if (flag === false && count === 4){
+  alert('You are out of guesses!');
+  count++;
+  }
+}
+
+/*for (var i=0; i < number.length; i++) {
 console.log('current number:', number[i]);
 
 if (answer === number[i]) {
@@ -61,8 +82,8 @@ break;
     }
 if (!flag) {
 alert('No, guess again.');
-    }
-  */
+    }*/
+
 
   /*Seventh Question
   var project = prompt('Can you guess how many coding projects Chris has participated in (You get four guesses.').toUpperCase();
