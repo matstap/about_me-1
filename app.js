@@ -85,6 +85,33 @@ alert('No, guess again.');
     }*/
 
 
+// question 7
+    var letters = ['a', 'b', 'c', 'd', 'e'];
+    var guess;
+    var flag = false;
+    var count = 1; // counts number of guesses
+
+    while (count <= 6 && flag === false) {
+      guess = prompt('Pick a letter.');
+      for (var i=0; i < letters.length; i++) {
+      console.log('current letter:', letters[i]);
+
+      if (guess === letters[i]) {
+      alert('Correct!');
+      flag = true;
+      break;
+            }
+          }
+      if (flag === false && count < 6) {
+      alert('No, guess again.');
+      count++;
+    } else if (flag === false && count === 6){
+      alert('You are out of guesses!');
+      count++;
+      }
+    }
+
+
   /*Seventh Question
   var project = prompt('Can you guess how many coding projects Chris has participated in (You get four guesses.').toUpperCase();
   console.log('project:' + project);
@@ -94,7 +121,3 @@ alert('No, guess again.');
   } else {
     alert('Incorrect!  Try again');
   */
-
-
-
-}
