@@ -14,7 +14,25 @@ function questions(entry, correct, response) {
   }
 }
 
-var gender = prompt('Yes or no - Does Chris publish code to Github?').toUpperCase();
+var entries = [
+  'Yes or no - Does Chris publish code to Github?',
+  'Yes or no - Do you think Chris carries a security clearance?',
+  'Yes or no - Chris prefers to work remotely.'
+  'Yes or no - Does Chris wear braces?'
+  'Yes or no - are you interested in contacting Chris for a conversation?'
+];
+var correct = ['Y', 'Y', 'Y', 'N', 'Y'];
+var responses = [
+  'You can find all of Chris\'s publicly available code here: https://github.com/taxpayer131.',
+  'Chris carries a Dept. of Defense Top Secret clearance and can work in most any Federal govt environment.',
+  'Chris prefers to work remotely only 1/3 of the time.',
+  'Chris does not wear braces',
+  'Send Chris an email at chris.stefan1844@gmail.com!  Thanks!'
+]
+
+
+// question 1
+/*var gender = prompt('Yes or no - Does Chris publish code to Github?').toUpperCase();
 console.log('gender:' + gender);
 
 
@@ -25,6 +43,7 @@ if (gender === 'N' || gender === 'NO') {
   tally++;
 }
 
+// question 2
 var suit = prompt('Yes or no - Do you think Chris carries a security clearance?').toUpperCase();
 console.log('suit:' + suit);
 
@@ -35,6 +54,7 @@ if (suit === 'N' || suit === 'NO') {
   tally++;
 }
 
+// question 3
 var hair = prompt('Yes or no - Chris prefers to work remotely.').toUpperCase();
 console.log('hair:' + hair);
 
@@ -45,6 +65,7 @@ if (hair === 'N' || hair === 'NO') {
   tally++;
 }
 
+// question 4
 var braces = prompt('Yes or no - do you wear braces?').toUpperCase();
 console.log('braces:' + braces);
 
@@ -55,6 +76,8 @@ if (braces === 'N' || braces === 'NO') {
   alert('Ouch.  I hope they come out soon.');
 }
 //
+
+// question 5
 var siblings = prompt('Yes or no - are you interested in contacting Chris for a conversation?').toUpperCase();
 console.log('siblings:' + siblings);
 
@@ -63,7 +86,7 @@ if (siblings === 'N' || siblings === 'NO') {
 } else {
   alert('Great!  Send Chris an email at chris.stefan1844@gmail.com!  Thanks!');
   tally++;
-}
+}*/
   //Sixth Question
 
 var number = ['3', '7', '9', '9', '23'];
