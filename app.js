@@ -4,9 +4,9 @@ var gender = prompt('Yes or no - Does Chris publish code to Github?').toUpperCas
 console.log('gender:' + gender);
 
 if (gender === 'N' || gender === 'no') {
-  alert('Incorrect.  You can find all of Chris/'s publicly available code here: https://github.com/taxpayer131'.');
+  alert('Incorrect.  You can find all of Chris\'s publicly available code here: https://github.com/taxpayer131.');
 } else {
-  alert('Correct! Find Chris/'s publicly available code here: https://github.com/taxpayer131'.'');
+  alert('Correct! Find Chris\'s publicly available code here: https://github.com/taxpayer131.');
 }
 
 var suit = prompt('Yes or no - Do you think Chris carries a security clearance?').toUpperCase();
@@ -43,7 +43,7 @@ if (siblings === 'N' || siblings === 'no') {
   alert('Oh well, maybe next time.');
 } else {
   alert('Great!  Send Chris an email at chris.stefan1844@gmail.com!  Thanks!');
-
+}
   /*Sixth Question
 
 var number = ['3', '7', '9', '9', '23'];
